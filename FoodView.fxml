@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FoodViewController">
+   <children>
+      <TableView fx:id="FoodTable" layoutX="58.0" layoutY="58.0" prefHeight="305.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="Food" prefWidth="205.0" text="식당" />
+        </columns>
+      </TableView>
+      <Button layoutX="362.0" layoutY="304.0" mnemonicParsing="false" onAction="#ranClicked" prefHeight="59.0" prefWidth="97.0" text="추첨" textFill="#0d4eff">
+         <font>
+            <Font name="MS Mincho" size="25.0" />
+         </font></Button>
+      <ImageView fitHeight="214.0" fitWidth="262.0" layoutX="279.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@beans-gd8d7fe143_640_1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="258.0" layoutY="14.0" prefHeight="29.0" prefWidth="149.0" text="오늘의 식당" textFill="#2fa841">
+         <font>
+            <Font name="Malgun Gothic" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="AddBtn" layoutX="58.0" layoutY="18.0" mnemonicParsing="false" onAction="#btn_AddClicked1" prefHeight="22.0" prefWidth="73.0" text="식당 추가" textFill="#901111" />
+   </children>
+</AnchorPane>
