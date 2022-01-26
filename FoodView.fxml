@@ -11,9 +11,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FoodViewController">
    <children>
-      <TableView fx:id="FoodTable" layoutX="58.0" layoutY="58.0" prefHeight="305.0" prefWidth="200.0">
+      <TableView fx:id="FoodTable" layoutX="36.0" layoutY="58.0" prefHeight="305.0" prefWidth="222.0">
         <columns>
-          <TableColumn fx:id="Food" prefWidth="205.0" text="식당" />
+          <TableColumn fx:id="Food" prefWidth="111.0" text="식당" />
+            <TableColumn fx:id="Count" prefWidth="111.0" text="당첨횟수" />
         </columns>
       </TableView>
       <Button layoutX="362.0" layoutY="304.0" mnemonicParsing="false" onAction="#ranClicked" prefHeight="59.0" prefWidth="97.0" text="추첨" textFill="#0d4eff">
@@ -30,6 +31,7 @@
             <Font name="Malgun Gothic" size="17.0" />
          </font>
       </Label>
-      <Button fx:id="AddBtn" layoutX="58.0" layoutY="18.0" mnemonicParsing="false" onAction="#btn_AddClicked1" prefHeight="22.0" prefWidth="73.0" text="식당 추가" textFill="#901111" />
+      <Button fx:id="AddBtn" layoutX="36.0" layoutY="18.0" mnemonicParsing="false" onAction="#btn_AddClicked1" prefHeight="22.0" prefWidth="73.0" text="식당 추가" textFill="#901111" />
+      <Button fx:id="Btn_reset" layoutX="147.0" layoutY="18.0" mnemonicParsing="false" onAction="#reClicked" text="횟수 초기화" textFill="#496125" />
    </children>
 </AnchorPane>

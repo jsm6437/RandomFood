@@ -10,9 +10,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddFoodViewController">
    <children>
-      <TableView fx:id="FoodTable2" layoutX="235.0" layoutY="64.0" prefHeight="306.0" prefWidth="219.0">
+      <TableView fx:id="FoodTable2" layoutX="235.0" layoutY="64.0" prefHeight="306.0" prefWidth="270.0">
         <columns>
-          <TableColumn fx:id="Food2" prefWidth="218.0" text="식당" />
+          <TableColumn fx:id="Food2" prefWidth="135.0" text="식당" />
+            <TableColumn fx:id="Count2" prefWidth="135.0" text="당첨횟수" />
         </columns>
       </TableView>
       <Label layoutX="230.0" layoutY="14.0" prefHeight="23.0" prefWidth="71.0" text="식당 추가" textFill="#941515">

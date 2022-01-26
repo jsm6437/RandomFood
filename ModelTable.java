@@ -2,9 +2,11 @@ package application;
 
 public class ModelTable {
 	String food;
+	int count;
 	
-	public ModelTable(String food) {
+	public ModelTable(String food,int count) {
 		this.food = food;
+		this.count = count;
 	}
 
 	public String getFood() {
@@ -13,5 +15,13 @@ public class ModelTable {
 
 	public void setFood(String food) {
 		this.food = food;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
 	}
 }
