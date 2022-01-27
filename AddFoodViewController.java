@@ -76,6 +76,9 @@ public class AddFoodViewController implements Initializable {
 			Connection conn = DBConnection.getConnection();
 
 			ModelTable selected = FoodTable2.getSelectionModel().getSelectedItem();
+			if(selected==null) {
+				JOptionPane.showMessageDialog(null, "삭제할 항목을 선택하세요.");
+			}
 
 			String sql = "DELETE FROM Food WHERE Food ='";
 

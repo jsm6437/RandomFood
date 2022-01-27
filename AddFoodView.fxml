@@ -32,6 +32,6 @@
          </font>
       </Button>
       <Button fx:id="BackBtn" layoutX="58.0" layoutY="314.0" mnemonicParsing="false" onAction="#btn_BackClicked" prefHeight="31.0" prefWidth="87.0" text="돌아가기" textFill="#79411a" />
-      <TextField fx:id="tf_Food" layoutX="58.0" layoutY="72.0" prefHeight="23.0" prefWidth="139.0" />
+      <TextField fx:id="tf_Food" layoutX="58.0" layoutY="72.0" prefHeight="23.0" prefWidth="139.0" promptText="식당명 입력" />
    </children>
 </AnchorPane>
