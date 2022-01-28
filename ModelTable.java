@@ -3,12 +3,22 @@ package application;
 public class ModelTable {
 	String food;
 	int count;
+	String checker;
 	
 	public ModelTable(String food,int count) {
 		this.food = food;
 		this.count = count;
 	}
+	public ModelTable(String checker) {
+		this.checker = checker;
+	}
 
+	public String getChecker() {
+		return checker;
+	}
+	public void setChecker(String checker) {
+		this.checker = checker;
+	}
 	public String getFood() {
 		return food;
 	}

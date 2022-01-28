@@ -15,10 +15,10 @@ public class Main extends Application {
 			//BorderPane root = new BorderPane();
 			//Scene scene = new Scene(root,400,400);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Parent root = FXMLLoader.load(getClass().getResource("FoodView.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("BotCheck.fxml"));
 			Scene scene = new Scene(root);
 			
-			primaryStage.setTitle("오늘의 식당");
+			primaryStage.setTitle("매크로 검사");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
