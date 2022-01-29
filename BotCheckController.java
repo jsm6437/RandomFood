@@ -51,7 +51,7 @@ public class BotCheckController implements Initializable {
 			Parent root;
 			root = FXMLLoader.load(getClass().getResource("FoodView.fxml"));
 			Scene scene = new Scene(root);
-			addStage.setTitle("식당 추가");
+			addStage.setTitle("오늘의 식당");
 			addStage.setScene(scene);
 			addStage.show();
 			primaryStage.close();
@@ -72,7 +72,7 @@ public class BotCheckController implements Initializable {
 		try {
 			JOptionPane.showMessageDialog(null, "<매크로 검사> Check란에 보이는 문자를 입력해주세요.");
 			Connection conn = DBConnection.getConnection();
-			String sql1 = "SELECT * FROM CHECKTABLE";
+			String sql1 = "select * from (select * from checktable order by dbms_random.value)where rownum = 1";
 			ResultSet rs = conn.createStatement().executeQuery(sql1);
 			
 			
