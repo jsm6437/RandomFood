@@ -125,7 +125,7 @@ public class AddFoodViewController implements Initializable {
 
 		Connection conn = DBConnection.getConnection(); // 만들어둔 DBconnection 클래스에서 데이터베이스 연결을 불러옵니다.
 		try {
-			ResultSet rs = conn.createStatement().executeQuery("select * from FOOD"); // 쿼리문을 작성하는 곳입니다.
+			ResultSet rs = conn.createStatement().executeQuery("select * from FOOD order by COUNT desc"); // 쿼리문을 작성하는 곳입니다.
 			while (rs.next()) {
 				oblist.add(new ModelTable(rs.getString("food"),rs.getInt("count")));
 			}
