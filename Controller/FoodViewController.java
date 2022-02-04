@@ -1,4 +1,4 @@
-package application;
+package Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import application.ModelTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -48,14 +49,14 @@ public class FoodViewController implements Initializable {
 			
 			Stage roulStage = new Stage();
 			Parent root;
-			root = FXMLLoader.load(getClass().getResource("Roulette.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/View/Roulette.fxml"));
 			Scene scene = new Scene(root);
 			roulStage.setTitle("추첨 중...");
 			roulStage.setScene(scene);
 			roulStage.show();
 			
 			
-			Connection conn = DBConnection.getConnection();
+			Connection conn = application.DBConnection.getConnection();
 
 			String sql1 = "UPDATE food SET COUNT = COUNT+1 WHERE FOOD LIKE '";
 			String sql2 = oblist.get((int) (Math.random() * oblist.size())).getFood();
@@ -93,7 +94,7 @@ public class FoodViewController implements Initializable {
 		Stage primaryStage = (Stage) AddBtn.getScene().getWindow();
 		Parent root;
 		try {
-			root = FXMLLoader.load(getClass().getResource("AddFoodView.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/View/AddFoodView.fxml"));
 			Scene scene = new Scene(root);
 			addStage.setTitle("식당 추가");
 			addStage.setScene(scene);
@@ -110,7 +111,7 @@ public class FoodViewController implements Initializable {
 	@FXML
 	void reClicked(ActionEvent event) {
 		try {
-			Connection conn = DBConnection.getConnection();
+			Connection conn = application.DBConnection.getConnection();
 			String sql = "UPDATE FOOD SET COUNT =";
 			sql = sql + '0';
 
@@ -141,7 +142,7 @@ public class FoodViewController implements Initializable {
 
 		
 		try {
-			Connection conn = DBConnection.getConnection(); // 만들어둔 DBconnection 클래스에서 데이터베이스 연결을 불러옵니다.
+			Connection conn = application.DBConnection.getConnection(); // 만들어둔 DBconnection 클래스에서 데이터베이스 연결을 불러옵니다.
 			ResultSet rs = conn.createStatement().executeQuery("select * from FOOD order by COUNT desc"); // 쿼리문을 작성하는 곳입니다.
 			while (rs.next()) {
 				oblist.add(new ModelTable(rs.getString("food"), rs.getInt("count")));

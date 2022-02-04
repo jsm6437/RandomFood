@@ -14,8 +14,8 @@ public class Main extends Application {
 		try {
 			//BorderPane root = new BorderPane();
 			//Scene scene = new Scene(root,400,400);
-			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Parent root = FXMLLoader.load(getClass().getResource("BotCheck.fxml"));
+			//scene.getStylesheets().add(getClass().getResource("/View/application.css").toExternalForm());
+			Parent root = FXMLLoader.load(getClass().getResource("/View/BotCheck.fxml"));
 			Scene scene = new Scene(root);
 			
 			primaryStage.setTitle("매크로 검사");

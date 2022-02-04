@@ -1,4 +1,4 @@
-package application;
+package Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import application.ModelTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -49,7 +50,7 @@ public class BotCheckController implements Initializable {
 			JOptionPane.showMessageDialog(null, "검사 성공");
 			Stage addStage = new Stage();
 			Parent root;
-			root = FXMLLoader.load(getClass().getResource("FoodView.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/View/FoodView.fxml"));
 			Scene scene = new Scene(root);
 			addStage.setTitle("오늘의 식당");
 			addStage.setScene(scene);
@@ -71,7 +72,7 @@ public class BotCheckController implements Initializable {
 		
 		try {
 			JOptionPane.showMessageDialog(null, "<매크로 검사> Check란에 보이는 문자를 입력해주세요.");
-			Connection conn = DBConnection.getConnection();
+			Connection conn = application.DBConnection.getConnection();
 			String sql1 = "select * from (select * from checktable order by dbms_random.value)where rownum = 1";
 			ResultSet rs = conn.createStatement().executeQuery(sql1);
 			

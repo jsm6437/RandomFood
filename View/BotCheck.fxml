@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BotCheckController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BotCheckController">
    <children>
       <TextField fx:id="ip_Text" layoutX="30.0" layoutY="219.0" prefHeight="22.0" prefWidth="166.0" promptText="표시된 문자를 입력하시오." />
       <TableView fx:id="CheckTable" layoutX="30.0" layoutY="44.0" prefHeight="143.0" prefWidth="166.0">
