@@ -50,9 +50,9 @@ public class BotCheckController implements Initializable {
 			JOptionPane.showMessageDialog(null, "검사 성공");
 			Stage addStage = new Stage();
 			Parent root;
-			root = FXMLLoader.load(getClass().getResource("/View/FoodView.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/View/LoginView.fxml"));
 			Scene scene = new Scene(root);
-			addStage.setTitle("오늘의 식당");
+			addStage.setTitle("로그인");
 			addStage.setScene(scene);
 			addStage.show();
 			primaryStage.close();

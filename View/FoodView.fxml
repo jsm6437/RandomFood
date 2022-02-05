@@ -33,5 +33,6 @@
       </Label>
       <Button fx:id="AddBtn" layoutX="36.0" layoutY="18.0" mnemonicParsing="false" onAction="#btn_AddClicked1" prefHeight="22.0" prefWidth="73.0" text="식당 추가" textFill="#901111" />
       <Button fx:id="Btn_reset" layoutX="147.0" layoutY="18.0" mnemonicParsing="false" onAction="#reClicked" text="횟수 초기화" textFill="#496125" />
+      <Button fx:id="out_Btn" layoutX="477.0" layoutY="18.0" mnemonicParsing="false" onAction="#out_Clicked" text="로그아웃" textFill="#8e1290" />
    </children>
 </AnchorPane>
