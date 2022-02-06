@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegistViewController">
+   <children>
+      <TableView fx:id="userTable" layoutX="218.0" layoutY="27.0" prefHeight="370.0" prefWidth="240.0">
+        <columns>
+          <TableColumn fx:id="tb_ID" text="아이디" />
+          <TableColumn fx:id="tb_PW" text="비밀번호" />
+            <TableColumn fx:id="tb_PH" text="전화번호" />
+        </columns>
+      </TableView>
+      <TextField fx:id="ip_ID" layoutX="37.0" layoutY="61.0" promptText="필수입력" />
+      <TextField fx:id="ip_PH" layoutX="37.0" layoutY="235.0" />
+      <Label layoutX="37.0" layoutY="40.0" text="아이디" />
+      <Label layoutX="37.0" layoutY="126.0" text="비밀번호" />
+      <Label layoutX="37.0" layoutY="212.0" text="전화번호" />
+      <Button layoutX="82.0" layoutY="276.0" mnemonicParsing="false" onAction="#registClicked" prefHeight="42.0" prefWidth="72.0" text="회원등록" />
+      <Button layoutX="82.0" layoutY="355.0" mnemonicParsing="false" onAction="#deleteClicked" prefHeight="42.0" prefWidth="72.0" text="회원삭제" />
+      <Button fx:id="lgn_Btn" layoutX="406.0" layoutY="446.0" mnemonicParsing="false" onAction="#lgnClicked" text="로그인" />
+      <PasswordField fx:id="ip_PW" layoutX="37.0" layoutY="148.0" promptText="필수입력" />
+   </children>
+</AnchorPane>
